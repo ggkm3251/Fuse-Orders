@@ -1,3 +1,4 @@
+
 const options = {
 	method: 'GET',
 	headers: {
@@ -10,7 +11,7 @@ const apiUrl = 'https://random-recipes.p.rapidapi.com/ai-quotes/20'
 fetch(apiUrl, options)
 .then(response => response.json())
 
-.then(data => console.log())
+.then(data => console.log(data))
 
 let image = document.getElementById('image')
 let fruitTitles = () => {

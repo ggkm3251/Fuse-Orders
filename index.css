@@ -1,3 +1,5 @@
+
+
 :root {
   --black: #1f1f1f;
   --white: #fff;
@@ -44,6 +46,7 @@ li {
 
 img {
   height: 100%;
+
 }
 
 section {
@@ -85,6 +88,11 @@ section {
   display: none;
 }
 
+.home .image #image {
+  height: 50%;
+  width: 70%;
+
+}
 .navbar a {
   font-weight: 500;
   transition: var(--transition);

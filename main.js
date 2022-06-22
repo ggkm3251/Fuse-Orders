@@ -6,10 +6,53 @@ const options = {
 	}
 };
 
-fetch('https://random-recipes.p.rapidapi.com/ai-quotes/20', options)
+const apiUrl = 'https://random-recipes.p.rapidapi.com/ai-quotes/20'
+fetch(apiUrl, options)
+.then(response => response.json())
+
+.then(data => console.log())
+
+let image = document.getElementById('image')
+let fruitTitles = () => {
+  const apiUrl = 'https://random-recipes.p.rapidapi.com/ai-quotes/20'
+  fetch(apiUrl, options)
 	.then(response => response.json())
-	.then(response => console.log(response))
+	.then(data => {
+    data.map(fruit => {
+      let ul = document.querySelector('#films')
+      let li = document.createElement('li')
+      li.classList.add('film', 'item')
+      li.innertext = fruit.title
+      ul.appendChild(li)
+
+    })
+  })
+ 
+let getFruits = () =>{
+  const apiUrl = 'https://random-recipes.p.rapidapi.com/ai-quotes/20'
+  fetch(apiUrl, options)
+	.then(response => response.json())
+  .then(data => {
+    data.forEach(fruit => fruitData(fruit))
+  })
+}  
+
+let fruitData = (fruit) => {
+  image.setAttribute('src', fruit.image)
+  title.innerText = fruit.title
+}
+
+let initialize = () => {
+  fruitTitles()
+  getFruits()
+}  
+initialize()
+
+
 	.catch(err => console.error(err));
+  }
+
+
 
 const navbar = document.querySelector(".navbar");
 const hamburger = document.querySelector(".hamburger");

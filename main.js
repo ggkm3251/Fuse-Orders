@@ -1,4 +1,4 @@
-
+//JvaScript API fetch
 const options = {
 	method: 'GET',
 	headers: {
@@ -15,18 +15,18 @@ fetch(apiUrl, options)
 
 let image = document.getElementById('image')
 let title = document.getElementById('title')
-let description = document.getElementById('film-info')
+let description = document.getElementById('fruit-info')
 
 let fruitTitles = () => {
   const apiUrl = 'https://random-recipes.p.rapidapi.com/ai-quotes/20'
   fetch(apiUrl, options)
 	.then(response => response.json())
 	.then(data => {
-    data.map(fruit => {
-      let ul = document.querySelector('#films')
+    data.map(data => {
+      let ul = document.querySelector('#fruits')
       let li = document.createElement('li')
-      li.classList.add('film', 'item')
-      li.innertext = fruit.title
+      li.classList.add('fruit-item')
+      li.innertext = data.title
       ul.appendChild(li)
 
     })
@@ -58,6 +58,7 @@ let fruitTitles = () => {
 const navbar = document.querySelector(".navbar")
 const hamburger = document.querySelector(".hamburger")
 
+//Toggle grid menu 
 hamburger.addEventListener("click", () => {
   navbar.classList.toggle("show")
 })

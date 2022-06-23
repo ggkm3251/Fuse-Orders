@@ -3,7 +3,7 @@ Fuse Orders is a service platform that takes food and grocery orders and deliive
 
 ## Table of Contents
 * [Project Name](#Project)
-* [Author]
+* [Author](#Author)
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)

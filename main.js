@@ -54,6 +54,20 @@ let fruitTitles = () => {
     getFruits()
   }  
   initialize()
+//Click Alert on 'make order button'
+const btn = document.querySelector('.btn')
+btn.addEventListener('click', () => {
+  alert('Order Received!','Waiting Processing!' )
+})
+
+/*const count = document.querySelector('.btn')
+function increaseCount(){
+  count > 0
+  count += 1;
+ 
+}
+console.log(increaseCount)*/
+
 
 const navbar = document.querySelector(".navbar")
 const hamburger = document.querySelector(".hamburger")

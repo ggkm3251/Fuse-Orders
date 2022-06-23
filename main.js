@@ -26,7 +26,7 @@ let fruitTitles = () => {
       let ul = document.querySelector('#fruits')
       let li = document.createElement('li')
       li.classList.add('fruit-item')
-      li.innertext = data.title
+      li.innertext = data.id
       ul.appendChild(li)
 
     })

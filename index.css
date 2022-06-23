@@ -13,8 +13,6 @@
   --transition: all 0.2s linear;
 }
 
-/* =========== Basic Reset =========== */
-
 *,
 *::after,
 *::before {
@@ -61,9 +59,6 @@ section {
   font-size: 3.6rem;
   font-weight: 500;
 }
-
-
-/* =========== Header =========== */
 
 .header {
   position: fixed;
@@ -122,6 +117,10 @@ section {
   box-shadow: var(--box-shadow);
 }
 
+.footer {
+  padding-left: 90px;
+}
+
 @media (max-width: 996px) {
   .logo {
     font-size: 3rem;
@@ -139,7 +138,6 @@ section {
 @media (max-width: 768px) {
   .header .navbar {
     position: fixed;
-    /* top: 9rem; */
     left: 0;
     right: 0;
     width: 90%;

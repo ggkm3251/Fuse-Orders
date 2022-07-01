@@ -1,3 +1,6 @@
+window.setTimeout(function () {
+  window.location.reload();
+}, 5000);
 //JvaScript API fetch
 const options = {
 	method: 'GET',

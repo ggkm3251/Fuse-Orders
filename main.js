@@ -46,13 +46,15 @@ let fruitTitles = () => {
   }  
   initialize()
 
+//DOMContentLoaded Event Listener  
 document.addEventListener('DOMContentLoaded', function(){
-  //Click Alert'
+  //Click Alert'//Event Listener
   const btn = document.querySelector('.btn')
   btn.addEventListener('click', () => {
   alert('Order Received!' )
 })
-
+ 
+//Change Event Listener
 const select = document.querySelector('select')
 const FoodType = document.getElementById('FoodType')
  

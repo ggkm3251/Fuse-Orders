@@ -7,16 +7,6 @@ const options = {
 	}
 };
 
-const apiUrl = 'https://random-recipes.p.rapidapi.com/ai-quotes/20'
-fetch(apiUrl, options)
-.then(response => response.json())
-
-.then(data => console.log(data))
-
-let image = document.getElementById('image')
-let title = document.getElementById('title')
-let description = document.getElementById('fruit-info')
-
 let fruitTitles = () => {
   const apiUrl = 'https://random-recipes.p.rapidapi.com/ai-quotes/20'
   fetch(apiUrl, options)
@@ -44,6 +34,7 @@ let fruitTitles = () => {
   }  
   
   let fruitData = (fruit) => {
+    const description = document.getElementById('fruit-info')
     image.setAttribute('src', fruit.image)
     title.innerText = fruit.title
     description.innerText = fruit.ingredients
@@ -54,20 +45,20 @@ let fruitTitles = () => {
     getFruits()
   }  
   initialize()
-//Click Alert on 'make order button'
-const btn = document.querySelector('.btn')
-btn.addEventListener('click', () => {
-  alert('Order Received!','Waiting Processing!' )
+
+document.addEventListener('DOMContentLoaded', function(){
+  //Click Alert'
+  const btn = document.querySelector('.btn')
+  btn.addEventListener('click', () => {
+  alert('Order Received!' )
 })
 
-/*const count = document.querySelector('.btn')
-function increaseCount(){
-  count > 0
-  count += 1;
+const select = document.querySelector('select')
+const FoodType = document.getElementById('FoodType')
  
-}
-console.log(increaseCount)*/
-
+select.addEventListener('change', function(){
+  FoodType.innerText = select.value
+})
 
 const navbar = document.querySelector(".navbar")
 const hamburger = document.querySelector(".hamburger")
@@ -97,3 +88,14 @@ Array.from(scrollLink).map((link) => {
     navbar.classList.remove('show')
   });
 });
+
+}) 
+
+
+
+
+
+
+
+
+
